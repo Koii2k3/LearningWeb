@@ -261,6 +261,12 @@ html {
     text-align: center;
     font: 1em 'Trebuchet MS';
     margin-top: 15px;
+    background: url("https://png.pngtree.com/background/20220727/original/pngtree-two-businessmen-shaking-hands-pattern-seamless-background-texture-repeat-wallpaper-geometric-picture-image_1827559.jpg") repeat center/15%;
+}
+
+#content .partner-header-content {
+    display: inline-block;
+    background-color: #ffffff98;
 }
 
 #content .partner-content {
