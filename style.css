@@ -92,6 +92,10 @@ html {
     background-color: rgba(255, 57, 57, 0.858);
 }
 
+.clear {
+    clear: both;
+}
+
 .header-search {
     color: white;
 }
@@ -102,8 +106,7 @@ html {
     margin: 5vh 0 0;
     /* padding: theo đơn vị % sẽ lấy theo % của chiều dài */
     padding-top: 20%;
-    background: url('./img/avatar.png') no-repeat center/contain;
-    /* background-size: auto; */
+    background: url('assets/img/avatar.png') no-repeat center/contain;
 }
 
 .slider-content {
@@ -144,7 +147,7 @@ html {
 }
 
 .content-header {
-    background: url(./img/contentheaderbackground.webp) center/contain;
+    background: url(assets/img/contentheaderbackground.webp) center/contain;
 }
 
 .content-parent-box {
@@ -192,11 +195,15 @@ html {
     padding-top: 15px;
 }
 
-.content-table th{
+.content-table th {
     text-align: right;
 }
 
-.content-table td::before{
+.content-table td {
+    font: 0.8em "Lucida Handwriting";
+}
+
+.content-table td::before {
     content: "\00a0";
 }
 
@@ -244,6 +251,50 @@ html {
     line-height: 30px;
 }
 
-#footer {
+#content #partner {
+    display: block;
+    position: relative;     
+    top: 100%;
+}
 
+#content .partner-header {
+    text-align: center;
+    font: 1em 'Trebuchet MS';
+    margin-top: 15px;
+}
+
+#content .partner-content {
+    position: relative;
+    width: auto;
+    float: left;
+    border: 3px dashed black;
+    border-radius: 5%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.partner-content ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.partner-group h3 {
+    font: 1.25em 'Lucida Handwriting';
+    font-weight: bold;
+    text-decoration: #E384FF underline;
+    color: #865DFF;
+}
+
+.partner-group li {
+    font: 0.9em 'Papyrus';
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.staff-table td {
+    padding: 0 10px;
+}
+
+#footer {
+    
 }
