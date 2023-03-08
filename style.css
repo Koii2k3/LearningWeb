@@ -275,7 +275,7 @@ html {
     justify-content: center;
     align-items: center;
     margin: 5px 0;
-    padding: 32px 0;
+    padding: 32px 0 48px;
     background-color: #F7F1E5;
 }
 
@@ -285,7 +285,7 @@ html {
     border: 3px dashed black;
     border-radius: 5%;
     padding: 15px;
-    margin: 0 15px 0;
+    margin: 0 10px 0;
 }
 
 #content .partner-content:hover {
@@ -323,17 +323,17 @@ html {
 }
 
 .staff-table td {
-    padding: 0 10px;
+    padding: 3px 0px;
 }
 
 .modal {
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -349,9 +349,9 @@ html {
     background-color: #3A98B9;
     position: relative;
     text-align: center;
-    padding: 25px 50px 10px;
+    padding: 25px 50px;
     font: bold 25px/1.5 cursive;
-
+    border-bottom: 5px solid darkred;
 }
 
 .modal .close-btn {
@@ -363,7 +363,7 @@ html {
 }
 
 .modal .close-btn:hover {
-    opacity: 50%;
+    opacity: 70%;
     cursor: pointer;
     background-color: #ccc;
     border-bottom-left-radius: 55%;
@@ -375,10 +375,11 @@ html {
 
 .modal-content {
     background-color: #E8D5C4;
-    padding: 5px 20px 10px;
+    padding: 10px 20px;
 }
 
 .modal-input {
+    font: bold 1.1em cursive;
     display: block;
     padding: 5px;
 }
@@ -386,10 +387,12 @@ html {
 .modal-content input {
     width: 50%;
     height: 1.5rem;
+    font: italic 1em cursive;
 }
 
 .modal-content textarea {
     width: 100%;
+    font: italic 1em cursive;
 }
 
 .modal-footer {
@@ -398,14 +401,88 @@ html {
 }
 
 .modal-footer .modal-footer-content {
+    font: 1.1em cursive;
 }
 
 .modal-footer button {
     position: relative;
-    padding: 5px 10px;
+    padding: 5px 15px;
+    text-align: center;
     margin-top: 7px;
+    background-color: seagreen;
+    border-radius: 30% 0 30% 0;
+    font: bold 1em cursive;
 }
+
+.modal-footer button:hover {
+    opacity: 85%;
+    cursor: pointer;
+}
+
+.modal-open {
+    display: flex;
+}
+
+.contact-ticket-btn {
+    /* display: block; */
+    width: 15%;
+    position: relative;
+    top: -70px;
+    background-image: linear-gradient(90deg, rgb(255, 234, 184),rgb(252, 193, 66)); 
+    padding: 10px 20px;
+    font: 1.2em 'Lucida Handwriting';
+    text-align: right;
+    border-radius: 0 40% 40% 0;
+    border: none;
+}
+
+.contact-ticket-btn:hover {
+    opacity: 85%;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.contact-ticket-btn-decorate {
+    height: 20%;
+    position: absolute;
+    display: inline-block;
+    padding-left: 5px;
+    right: -7px;
+    bottom: 18.5px;
+    background-color: rgb(252, 193, 66);
+}
+
+.modal-animate-forwards {
+    animation: modalForwards 1s ease forwards;
+}
+
+.modal-animate-backwards {
+    animation: modalBackwards 0.5s ease forwards;
+}
+
 
 #footer {
 
+}
+
+@keyframes modalForwards {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes modalBackwards {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
 }

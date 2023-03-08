@@ -40,23 +40,20 @@
                 </div>
                 <div class="modal-content">
                     <label for="modal-email" class="modal-input">
-                        <i class="ti-email"></i>
-                        Your email:
+                        <i class="ti-email"></i>&nbsp;Your email:
                     </label>
                     <input type="text" id="modal-email" placeholder="Your email address">
 
                     <label for="modal-reply" class="modal-input">
-                        <i class="ti-bookmark"></i>
-                        Topic question:
+                        <i class="ti-bookmark"></i> Topic question:
                     </label>
-                    <textarea name="reply" id="modal-reply" cols="5" rows="5" placeholder="Fill anything you wonder here"></textarea>
+                    <textarea name="reply" id="modal-reply" cols="5" rows="5" placeholder="Fill anything you are wondering here"></textarea>
 
                     <div class="modal-footer">
                         <div class="modal-footer-content">
-                            <p>Thank you so much for your reply about my website.<br>Best wish!</p>
+                            <p>Thank you so much for your reply about my website.<br>Best wishes!</p>
                             <button class="modal-btn-send">
-                                Send
-                                <i class="ti-check"></i>
+                                Send<i class="ti-check"></i>
                             </button>
                         </div>
                     </div>
@@ -251,12 +248,36 @@
                     </div>
                     <div class="clear"></div>
                 </div>
+                <button class="contact-ticket-btn">
+                    Contact me?
+                    <div class="contact-ticket-btn-decorate"></div>
+                </button>
+                
             </div>
         </div>
         <div id="footer">
             
         </div>
     </div>
+
+    <script>
+        const contactBtn = document.querySelector('.contact-ticket-btn').addEventListener('click', function() {
+            document.querySelector('.modal').classList.add('modal-open', 'modal-animate-forwards');
+        })
+
+        const contactCloseBtn = document.querySelector('.close-btn').addEventListener('click', function() {
+            document.querySelector('.modal').classList.remove('modal-open');
+        })
+        
+        const contactSendBtn = document.querySelector('.modal-btn-send').addEventListener('click', function() {
+            document.querySelector('.modal').classList.add('modal-animate-backwards');
+            setTimeout(function () {
+                document.querySelector('.modal').classList.remove('modal-open', 'modal-animate-forwards', 'modal-animate-backwards');
+            }, 500)
+        })
+
+    </script>
+
 </body>
 </html>
 
