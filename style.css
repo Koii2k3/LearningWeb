@@ -384,8 +384,12 @@ html {
     padding: 5px;
 }
 
-.modal-content input {
+.modal-infor {
+    display: inline-block;
     width: 50%;
+}
+
+.modal-content input {
     height: 1.5rem;
     font: italic 1em cursive;
 }
@@ -452,6 +456,33 @@ html {
     background-color: rgb(252, 193, 66);
 }
 
+.other-contact {
+    float: right;
+    width: 50%;
+    margin-top: 30px;
+    text-align: center;
+    transform: translateX(-10%);
+}
+
+.other-contact-header {
+    font: bold 1.2em cursive;
+    margin-bottom: 20px;
+}
+
+.other-contact a {
+    background-color: burlywood;
+    color: black;
+    text-decoration: unset;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 15%;
+    opacity: 0.7;
+}
+
+.other-contact a:hover {
+    opacity: 1;
+}
+
 .modal-animate-forwards {
     animation: modalForwards 1s ease forwards;
 }
@@ -459,7 +490,6 @@ html {
 .modal-animate-backwards {
     animation: modalBackwards 0.5s ease forwards;
 }
-
 
 #footer {
 
