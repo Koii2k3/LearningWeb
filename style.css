@@ -10,7 +10,7 @@ html {
 }
 
 #main {
-
+    height: 100vh;
 }
 
 #header {
@@ -251,7 +251,7 @@ html {
     line-height: 30px;
 }
 
-#content #partner {
+#partner {
     display: block;
     position: relative;     
     top: 100%;
@@ -275,7 +275,7 @@ html {
     justify-content: center;
     align-items: center;
     margin: 5px 0;
-    padding: 32px 0 48px;
+    padding: 32px 0 64px;
     background-color: #F7F1E5;
 }
 
@@ -381,7 +381,7 @@ html {
 .modal-input {
     font: bold 1.1em cursive;
     display: block;
-    padding: 5px;
+    padding-top: 5px;
 }
 
 .modal-infor {
@@ -476,7 +476,7 @@ html {
     padding: 10px 15px;
     margin: 0 10px;
     border-radius: 15%;
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 .other-contact a:hover {
@@ -491,8 +491,35 @@ html {
     animation: modalBackwards 0.5s ease forwards;
 }
 
-#footer {
+.field-empty {
+    display: none;
+    font: italic 0.9em cursive;
+    color: red;
+}
 
+#footer {
+    position: relative;
+    width: 100%;
+    height: 35%;
+    top: 76%;
+    overflow: hidden;
+}
+
+.last-img {
+    width: 100%;
+    height: 500px;
+    background: url(./assets/img/last-img.jpg) no-repeat center/cover;
+    border-top: 3px solid black
+}
+
+#partner-index {
+    position: absolute;
+    top: -6%;
+}
+
+#achievement-index {
+    position: absolute;
+    top: -26%;
 }
 
 @keyframes modalForwards {

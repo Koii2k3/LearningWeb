@@ -28,7 +28,7 @@
 </head>
 <body>
     <div id="main">
-        <div class="modal modal-open">
+        <div class="modal">
             <div class="model-container">
                 <div class="close-btn">
                     <i class="ti-close"></i>
@@ -38,51 +38,56 @@
                     <i class="ti-comment-alt"></i>
                     <div class="modal-describe">Leaving your information if you have any questions, I will contact you soon.</div>
                 </div>
-                <div class="modal-content">
-                    <div class="modal-infor">
-                        <label for="modal-name" class="modal-input">
-                            <i class="ti-email"></i>&nbsp;Your name:
-                        </label>
-                        <input type="text" id="modal-name" placeholder="I can call you are">
+                <form action="">
+                    <div class="modal-content">
+                        <div class="modal-infor">
+                            <label for="modal-name" class="modal-input">
+                                <i class="ti-user"></i>&nbsp;Your name:
+                            </label>
+                            <p class="field-empty" id="name-empty">Please enter your name <i class="ti-hand-point-down"></i></p>
+                            <input type="text" id="modal-name" placeholder="I can call you are">
 
-                        <label for="modal-email" class="modal-input">
-                            <i class="ti-email"></i>&nbsp;Your email:
+                            <label for="modal-email" class="modal-input">
+                                <i class="ti-email"></i>&nbsp;Your email:
+                            </label>
+                            <p class="field-empty" id="email-empty">Please enter your email address <i class="ti-hand-point-down"></i></p>
+                            <input type="text" id="modal-email" placeholder="Your email address">
+                        </div>
+                        <div class="other-contact">
+                            <div class="other-contact-header">By the other way:</div>
+                            <div class="modal-methods">
+                                <a href="https://www.facebook.com/profile.php?id=100004934144985" title="Me on Facebook"><i class="ti-facebook"></i></a>
+                                <a href="https://www.instagram.com/___k.o.i.i___/" title="Me on Instagram"><i class="ti-instagram"></i></a>
+                                <a href="https://github.com/Koii2k3" title="Me on Github"><i class="ti-github"></i></a>
+                                <a href="https://mail.google.com/mail/u/2/#inbox?compose=CllgCJZZQlrfcftZFjXbDwlSSzZkhQdhvGsbKXSdwJTGSBDdrwPlrmJbmrHGgZWxjfsXSGPbQCg" title="Gmail to me"><i class="ti-email"></i></a>
+                            </div>
+                        </div>
+
+                        <label for="modal-reply" class="modal-input">
+                            <i class="ti-bookmark"></i> Topic question:
                         </label>
-                        <input type="text" id="modal-email" placeholder="Your email address">
-                    </div>
-                    <div class="other-contact">
-                        <div class="other-contact-header">By the other way:</div>
-                        <div class="modal-methods">
-                            <a href="https://www.facebook.com/profile.php?id=100004934144985" title="Me on Facebook"><i class="ti-facebook"></i></a>
-                            <a href="https://www.instagram.com/___k.o.i.i___/" title="Me on Instagram"><i class="ti-instagram"></i></a>
-                            <a href="https://github.com/Koii2k3" title="Me on Github"><i class="ti-github"></i></a>
-                            <a href="https://mail.google.com/mail/u/2/#inbox?compose=CllgCJZZQlrfcftZFjXbDwlSSzZkhQdhvGsbKXSdwJTGSBDdrwPlrmJbmrHGgZWxjfsXSGPbQCg" title="Gmail to me"><i class="ti-email"></i></a>
+                        <p class="field-empty" id="reply-empty">Do you forget to drop a message? <i class="ti-hand-point-down"></i></p>
+                        <textarea name="reply" id="modal-reply" cols="5" rows="5" placeholder="Fill anything you are wondering here"></textarea>
+
+                        <div class="modal-footer">
+                            <div class="modal-footer-content">
+                                <p>Thank you so much for your reply about my website.<br>Best wishes!</p>
+                                <button class="modal-btn-send" type="sumbit"> 
+                                    Send<i class="ti-check"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-
-                    <label for="modal-reply" class="modal-input">
-                        <i class="ti-bookmark"></i> Topic question:
-                    </label>
-                    <textarea name="reply" id="modal-reply" cols="5" rows="5" placeholder="Fill anything you are wondering here"></textarea>
-
-                    <div class="modal-footer">
-                        <div class="modal-footer-content">
-                            <p>Thank you so much for your reply about my website.<br>Best wishes!</p>
-                            <button class="modal-btn-send">
-                                Send<i class="ti-check"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
         <div id="header">
             <!-- Navigation -->
             <ul id="nav">
-                <li><a href="">Intro</a></li>
-                <li><a href="">Information</a></li>
-                <li><a href="">Achievements</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Intro</a></li>
+                <li><a href="#content">Information</a></li>
+                <li><a href="#achievement-index">Achievements</a></li>
+                <li><a href="#partner-index">Contact</a></li>
                 <li>
                     <a href="">
                         Future Plan
@@ -162,7 +167,7 @@
                         </table>
                     </div>
                 </div>
-
+            
                 <div class="content-child-box" id="content-child-box3">
                     <div class="content-child-header"><h2>Contact</h2></div>
                     <div class="content-child-content">
@@ -175,6 +180,7 @@
 
                 <div class="content-child-box" id="content-child-box4">
                     <div class="content-child-header">
+                        <div id="achievement-index"></div>
                         <h2>Achievements</h2>
                         <div class="content-child-content">
                             <p><i class="ti-cup"></i><i> Second Prize</i> - Excellent student solves Math on city-level handheld computers 2020-2021.</p></li>
@@ -187,6 +193,7 @@
 
             <!-- Partner -->
             <div id="partner">
+                <div id="partner-index"></div>
                 <div class="partner-header">
                     <div class="partner-header-content">
                         <h2>Who I am working with</h2>
@@ -264,15 +271,15 @@
                     </div>
                     <div class="clear"></div>
                 </div>
-                <button class="contact-ticket-btn">
+                <button class="contact-ticket-btn" id="contact-me">
                     Contact me?
                     <div class="contact-ticket-btn-decorate"></div>
-                </button>
-                
+                </button>  
             </div>
+
         </div>
         <div id="footer">
-            
+            <div class="last-img"></div>
         </div>
     </div>
 
@@ -285,12 +292,39 @@
             document.querySelector('.modal').classList.remove('modal-open');
         })
         
-        const contactSendBtn = document.querySelector('.modal-btn-send').addEventListener('click', function() {
-            document.querySelector('.modal').classList.add('modal-animate-backwards');
-            setTimeout(function () {
-                document.querySelector('.modal').classList.remove('modal-open', 'modal-animate-forwards', 'modal-animate-backwards');
-            }, 500)
+        const contactSendBtn = document.querySelector('.modal-btn-send').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            if (document.querySelector('#modal-name').value === "") {
+                document.getElementById('name-empty').style.display = "block";
+                event.preventDefault();
+            }
+            else if (document.querySelector('#modal-email').value === "") {
+                document.getElementById('email-empty').style.display = "block";
+                event.preventDefault();
+            }
+            else if (document.querySelector('#modal-reply').value === "") {
+                document.getElementById('reply-empty').style.display = "block";
+                event.preventDefault();
+            }
+            else {
+                document.querySelector('.modal').classList.add('modal-animate-backwards');
+                setTimeout(function () {
+                    document.querySelector('.modal').classList.remove('modal-open', 'modal-animate-forwards', 'modal-animate-backwards');
+                }, 250)
+            }
+
+            document.querySelector('#modal-name').addEventListener('keyup', function() {
+                document.getElementById('name-empty').style.display = "none";
+            })
+            document.querySelector('#modal-email').addEventListener('keyup', function() {
+                document.getElementById('email-empty').style.display = "none";
+            })
+            document.querySelector('#modal-reply').addEventListener('keyup', function() {
+                document.getElementById('reply-empty').style.display = "none";
+            })
         })
+
 
     </script>
 
