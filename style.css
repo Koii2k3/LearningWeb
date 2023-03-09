@@ -110,6 +110,11 @@ html {
     background: url('assets/img/avatar.png') no-repeat center/contain;
 }
 
+#slider:hover {
+    background-size: 21%;
+}
+
+
 .slider-content {
     text-align: center;
     font-size: x-large;
@@ -172,6 +177,11 @@ html {
     width: 30%;
     background: #FFB3B3;
     border: 5px dashed #F48484;
+}
+
+.content-child-box:hover {
+    transform: scaleY(1.07);
+    z-index: 2;
 }
 
 #content-child-box2 {
